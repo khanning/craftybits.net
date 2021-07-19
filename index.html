@@ -1,6 +1,87 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>CraftyBits</title>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background-color: #333333;
+      }
+      #content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo {
+        height: 80px;
+        margin: 0 2px;
+      }
+      .crafty {
+        animation: servo 30s infinite linear;
+      }
+      .bits {
+        animation: glow 30s infinite linear 7.2s;
+
+      }
+      @keyframes servo {
+        24%, 100% {
+          transform: rotate(0deg);
+        }
+        6% {
+          transform: rotate(-15deg);
+        }
+        18% {
+          transform: rotate(15deg);
+        }
+      }
+      @keyframes glow {
+        4% {
+          filter: drop-shadow(0 0 5px #FFFF00);
+        }
+        6% {
+          filter: drop-shadow(0 0 5px #00FF00);
+        }
+        8% {
+          filter: drop-shadow(0 0 5px #00FF80);
+        }
+        10% {
+          filter: drop-shadow(0 0 5px #00FFFF);
+        }
+        12% {
+          filter: drop-shadow(0 0 5px #0080FF);
+        }
+        14% {
+          filter: drop-shadow(0 0 5px #0000FF);
+        }
+        16% {
+          filter: drop-shadow(0 0 5px #8000FF);
+        }
+        18% {
+          filter: drop-shadow(0 0 5px #FF00FF);
+        }
+        20% {
+          filter: drop-shadow(0 0 5px #FF0000);
+        }
+        22% {
+          filter: drop-shadow(0 0 5px #FF8000);
+        }
+        23% {
+          filter: drop-shadow(0 0 5px #FFFF00);
+        }
+        24% {
+          filter: drop-shadow(0 0 0px #FFFF00);
+        }
+      }
+    </style>
+  </head>
   <body>
-    <h1>CraftyBits</h1>
+    <div id="content">
+      <img class="logo crafty" src="assets/crafty-logo.svg" />
+      <img class="logo bits" src="assets/bits-logo.svg" />
+    </div>
   </body>
 </html>
