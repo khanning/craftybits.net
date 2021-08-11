@@ -13,8 +13,14 @@
       #content {
         height: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+      }
+      .logo-container {
+        display: flex;
+        align-items: center;
+        flex: 1;
       }
       .logo {
         height: 80px;
@@ -26,6 +32,9 @@
       .bits {
         animation: glow 30s infinite linear 7.2s;
 
+      }
+      .subscribe {
+        margin-bottom: 20px;
       }
       @keyframes servo {
         24%, 100% {
@@ -80,8 +89,33 @@
   </head>
   <body>
     <div id="content">
-      <img class="logo crafty" src="assets/crafty-logo.svg" />
-      <img class="logo bits" src="assets/bits-logo.svg" />
+      <div class="logo-container">
+        <img class="logo crafty" src="assets/crafty-logo.svg" />
+        <img class="logo bits" src="assets/bits-logo.svg" />
+      </div>
+      <div class="subscribe">
+        <!-- Begin Mailchimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+          #mc_embed_signup{color: #ccc; clear:left; font:14px Helvetica,Arial,sans-serif;  width:400px;}
+          #mc_embed_signup_scroll{display: flex; flex-direction: column; align-items: center;}
+          #mc_embed_signup input.email {margin: 0 0 10px 0;}
+          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+        <div id="mc_embed_signup">
+        <form action="https://craftybits.us5.list-manage.com/subscribe/post?u=7dcac86235e431fd22ba9ee42&amp;id=3050a01fae" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+          <label for="mce-EMAIL">Sign up for CraftyBits updates!</label>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7dcac86235e431fd22ba9ee42_3050a01fae" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+        </div>
+        <!--End mc_embed_signup-->
+      </div>
     </div>
   </body>
 </html>
